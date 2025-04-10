@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         example1();
         example2();
+        example3();
     }
 
     public static void example1() {
@@ -37,5 +38,23 @@ public class Main {
         }
 
         System.out.println(d);  // Expects [Cherry, Apple, Banana]
+    }
+
+    public static void example3() {
+        Deque<String> fruitDeque = new ArrayDeque<>();
+        fruitDeque.add("Apple");
+        fruitDeque.add("Banana");
+        fruitDeque.add("Mango");
+        fruitDeque.add("Orange");
+
+        //Rotate right
+        String last = fruitDeque.removeLast();
+        fruitDeque.addFirst(last);
+
+        //Rotate left
+        String first = fruitDeque.removeFirst();
+        fruitDeque.addLast(first);
+
+        System.out.println(first);
     }
 }
