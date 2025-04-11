@@ -1,4 +1,4 @@
-package main.java;
+package main.java.TreeMap;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -11,6 +11,8 @@ public class Main {
         example3();
         example4();
         example5();
+        example6();
+        example7();
     }
 
     public static void example1() {
@@ -131,5 +133,14 @@ public class Main {
 
         System.out.println("The Winner is " + winner);
         System.out.println("Highest Score = " + highestScore);
+    }
+
+    public static void example7() {
+        TreeMap<String, Integer> sMap = new TreeMap<>();
+        sMap.put("a", 1);
+        sMap.put("b", 1);
+        sMap.put("c", 1);
+
+        System.out.println(sMap);
     }
 }

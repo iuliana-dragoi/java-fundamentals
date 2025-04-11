@@ -1,4 +1,4 @@
-package main.java;
+package main.java.TreeMap;
 
 import java.util.Map;
 import java.util.TreeMap;
