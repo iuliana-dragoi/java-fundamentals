@@ -1,4 +1,4 @@
-package main.java.exceptions;
+package main.java.BankSystemExample1.exceptions;
 
 public class InvalidAccountException extends Exception {
 

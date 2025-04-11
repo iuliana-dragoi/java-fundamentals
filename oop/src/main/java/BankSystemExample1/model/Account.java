@@ -1,6 +1,6 @@
-package main.java.model;
+package main.java.BankSystemExample1.model;
 
-import main.java.exceptions.InsufficientFundsException;
+import main.java.BankSystemExample1.exceptions.InsufficientFundsException;
 
 public class Account {
 

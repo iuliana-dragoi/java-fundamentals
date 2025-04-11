@@ -1,10 +1,10 @@
 package main.java;
 
-import main.java.exceptions.InsufficientFundsException;
-import main.java.exceptions.InvalidAccountException;
-import main.java.model.Account;
-import main.java.model.Bank;
-import main.java.model.Customer;
+import main.java.BankSystemExample1.exceptions.InsufficientFundsException;
+import main.java.BankSystemExample1.exceptions.InvalidAccountException;
+import main.java.BankSystemExample1.model.Account;
+import main.java.BankSystemExample1.model.Bank;
+import main.java.BankSystemExample1.model.Customer;
 
 public class Main {
 

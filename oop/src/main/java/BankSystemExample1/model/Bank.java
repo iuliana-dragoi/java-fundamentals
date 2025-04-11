@@ -1,7 +1,7 @@
-package main.java.model;
+package main.java.BankSystemExample1.model;
 
-import main.java.exceptions.InsufficientFundsException;
-import main.java.exceptions.InvalidAccountException;
+import main.java.BankSystemExample1.exceptions.InsufficientFundsException;
+import main.java.BankSystemExample1.exceptions.InvalidAccountException;
 
 import java.util.HashMap;
 import java.util.Map;
