@@ -1,0 +1,62 @@
+🛠 Project Title: Smart Entertainment Management System
+
+🎯 Project Overview
+Create a console-based Java application that models a Smart Entertainment System, where users can manage a collection of Musicians, Albums, Films, Devices, People, and more.
+The system will make use of classes, enums, encapsulation, inheritance, polymorphism, and abstraction.
+
+🧩 Core Functionalities
+
+1. User Roles (Person / Manager / Student)
+- Implement a base class Person with encapsulated attributes.
+- Use inheritance to define roles like Manager, Student.
+- Add a Major field for students.
+- Validate age using encapsulation.
+
+2. Music Module
+- Musician class with yearsActive, constructors (default, parameterized, copy).
+- Album class with multiple constructors.
+- Albums are linked to musicians.
+- Enumerate Genre (Pop, Rock, Jazz, Classical).
+
+3. Film Library
+- Create a Film class with all standard properties.
+- Use encapsulation and constructor chaining.
+- Implement methods like displayInfo() and getDuration().
+
+4. Gadgets & Devices
+- Gadget class with validated price.
+- Abstract class Device → Implement classes like Phone, Laptop with overridden methods.
+- Demonstrate method overloading (convertCurrency() in Device).
+
+5. Superheroes Universe
+- Enum of Superhero with attributes like power, weakness.
+- Fix and complete enums.
+- Use encapsulation in superhero attributes.
+- Add polymorphic behavior like fight() method.
+
+6. Vehicles
+- Abstract class Vehicle with derived class Car, showing inheritance.
+- Enum for CarType.
+- Implement abstract and concrete methods.
+
+7. Shapes Module (Abstraction Practice)
+- Abstract class Shape → Classes like Circle, Triangle, Rectangle.
+- Implement method getDescription() and other abstract methods like area().
+
+🔄 Polymorphism
+- Use method overriding for display methods.
+- Use method overloading for utilities like convertCurrency(double amount), convertCurrency(double amount, String targetCurrency).
+
+🧪 Functional Scenarios to Implement
+- A manager logs in and adds musicians and their albums.
+- A student can explore superhero data and save favorite ones.
+- A user can view films and gadgets with price validation.
+- A car dealership manager adds new vehicles with CarType enum and shows polymorphic info.
+- A calculator handles multiple operations via polymorphism.
+- Users can add new shapes and compute area/description.
+
+🔍 Extra (Optional Enhancements)
+- Use collections like ArrayList or Map to manage objects.
+- Implement simple file-based persistence (text file read/write).
+- Add a menu-driven console interface for navigation.
+- Use interfaces if you want to push your abstraction knowledge.
