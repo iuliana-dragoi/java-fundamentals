@@ -1,0 +1,62 @@
+💼 Project Title: SmartBank - A Modular Banking System
+🧾 PROJECT REQUIREMENTS
+🏦 1. Bank System Overview
+Implement a modular banking system that supports:
+Multiple types of accounts
+Transactions (deposit, withdrawal, transfer)
+User roles (Customer, Employee, Admin)
+Loan processing
+Reporting
+Notifications (mocked)
+
+👤 2. User Roles
+Define the following roles using interfaces/abstract classes:
+User (interface): defines basic user operations (login, logout, getProfile)
+AbstractUser (abstract class): contains shared attributes like name, ID, email
+Customer, Employee, Admin extend from AbstractUser
+
+💰 3. Accounts
+Use inheritance for different account types:
+Account (abstract class): id, balance, owner, accountNumber, createdAt
+SavingsAccount, CheckingAccount, BusinessAccount extend it
+Implement interest calculation using an interface (e.g., InterestBearing)
+
+🔄 4. Transactions
+Implement transaction logic using polymorphism:
+Transaction (abstract class): transactionId, amount, date
+Deposit, Withdrawal, Transfer classes extend Transaction
+Maintain transaction history per account
+
+💳 5. Loan Module
+Create a loan system:
+Interface: LoanEligible (with isEligible(), applyForLoan())
+Implement in Customer
+Classes: LoanApplication, Loan with interest, repayment period, status
+
+🧾 6. Reports
+Generate reports using interfaces and polymorphism:
+Report interface: generate()
+Classes: TransactionReport, LoanReport, AccountSummaryReport
+
+📩 7. Notifications
+Use an interface:
+Notifier (with sendNotification(String message))
+Implementations: EmailNotifier, SMSNotifier, PushNotifier
+Inject these into services using composition
+
+🔐 8. Authentication System
+Simulate login/logout:
+AuthenticationService with login(email, password), logout(user)
+Use a Map<String, String> for mock credentials
+
+⚠ 9. Exception Handling
+Custom exceptions:
+InsufficientFundsException
+InvalidTransactionException
+UnauthorizedAccessException
+
+📦 10. Extras (Optional but recommended)
+Use List, Map, and Set from Java Collections API
+Add support for currency conversion
+Implement a command-line interface (CLI) to simulate usage
+Use enum for account type, loan status, roles

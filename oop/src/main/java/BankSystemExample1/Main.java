@@ -1,4 +1,4 @@
-package main.java;
+package main.java.BankSystemExample1;
 
 import main.java.BankSystemExample1.exceptions.InsufficientFundsException;
 import main.java.BankSystemExample1.exceptions.InvalidAccountException;
