@@ -53,5 +53,7 @@ public class BankAccount {
             Worker worker = new Worker(account, i);
             es.submit(worker);
         }
+
+        es.shutdown();
     }
 }
