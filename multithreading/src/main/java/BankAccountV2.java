@@ -3,11 +3,11 @@ package main.java;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class BankAccount {
+public class BankAccountV2 {
 
     private int balance;
 
-    public BankAccount(int startBalance) {
+    public BankAccountV2(int startBalance) {
         this.balance = startBalance;
     }
 
@@ -15,17 +15,17 @@ public class BankAccount {
         return balance;
     }
 
-    public synchronized void deposit(int amount) {
+    public void deposit(int amount) {
         balance += amount;
     }
 
     static class Worker implements Runnable {
 
-        private BankAccount account;
+        private BankAccountV2 account;
 
         private int workerId;
 
-        public Worker(BankAccount account, int workerId) {
+        public Worker(BankAccountV2 account, int workerId) {
             this.account = account;
             this.workerId = workerId;
         }
@@ -34,11 +34,13 @@ public class BankAccount {
         @Override
         public void run() {
             for(int i = 0; i < 10; i++) {
-                int startBalance = account.getBalance();
-                System.out.println();
-                account.deposit(10);
-                int endBalance = account.getBalance();
-                System.out.println("Worker " + workerId + " " + " startBalance " + startBalance + " endBalance " + endBalance);
+                synchronized (account) {
+                    int startBalance = account.getBalance();
+                    System.out.println();
+                    account.deposit(10);
+                    int endBalance = account.getBalance();
+                    System.out.println("Worker " + workerId + " " + " startBalance " + startBalance + " endBalance " + endBalance);
+                }
             }
         }
     }
@@ -46,7 +48,7 @@ public class BankAccount {
     public static void main(String[] args) {
 
         ExecutorService es = Executors.newFixedThreadPool(5);
-        BankAccount account = new BankAccount(100);
+        BankAccountV2 account = new BankAccountV2(100);
 
         //We submit the worker 5 times
         for(int i = 0; i < 5; i++) {
