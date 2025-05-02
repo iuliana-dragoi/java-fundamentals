@@ -1,0 +1,37 @@
+🏦 System Overview
+Each Account has:
+- A unique ID and a balance (BigDecimal)
+- A personal transaction queue (BlockingQueue<Transaction>)
+- A flag to ensure only one thread processes its queue
+
+The Bank:
+- Creates accounts
+- Provides deposit(), withdraw(), and transfer() methods
+- Uses a thread pool (ExecutorService) to process transactions
+
+🔄 Transaction Processing
+- submitTransaction() adds a transaction to the queue
+- If not already processing, it starts a background worker
+- Transactions are processed sequentially, in the order they arrive
+
+💰 Deposit & Withdraw
+- Only involve one account
+- No locking needed (lock()/unlock() not required)
+- Safe because one thread processes the queue
+
+🔁 Transfer
+- Involves two accounts
+- Needs explicit locking to avoid race conditions
+- Locks accounts in ID order to prevent deadlocks
+- Smaller ID first, then larger
+- Can be submitted to the from account's queue
+
+🔐 Thread Safety
+- All operations are thread-safe
+- Per-account transaction queues eliminate race conditions
+- Locking is used only for operations involving multiple accounts (like transfers)
+
+✅ Benefits
+- High concurrency: many accounts can process in parallel
+- No data corruption due to isolated processing
+- Simple logic: each account behaves like a tiny single-threaded processor

@@ -1,4 +1,4 @@
-package main.java.BankSystemExampleMain;
+package main.java.BankingSystem1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
