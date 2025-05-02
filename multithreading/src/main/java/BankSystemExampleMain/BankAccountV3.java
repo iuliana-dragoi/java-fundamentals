@@ -1,4 +1,4 @@
-package main.java.BanckSystemExampleMain;
+package main.java.BankSystemExampleMain;
 
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
