@@ -1,0 +1,30 @@
+# --- Java files ---
+*.class
+
+# --- Log files ---
+*.log
+
+# --- Build directories ---
+/target/
+/build/
+/out/
+
+# --- Eclipse ---
+.classpath
+.project
+.settings/
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+*.iws
+
+# --- VS Code ---
+.vscode/
+
+# --- OS-generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Environment files ---
+.env
