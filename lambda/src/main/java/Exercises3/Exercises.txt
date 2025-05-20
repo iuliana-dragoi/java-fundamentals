@@ -1,0 +1,29 @@
+1.Filter a list of products and return only those that are in stock and priced under 100 RON.
+Create a Product class with name, price, and inStock. Use a Predicate<Product> to filter the list accordingly.
+
+2.Transform a list of sentences into a list of lengths of unique words.
+Use a Function<String, List<Integer>> that receives a sentence (e.g., "Ana are mere") and returns a list of lengths of each unique word. Collect all resulting lists into one using flatMap.
+
+3.Combine two lists of Employee and group them by department.
+Create an Employee(String name, String department) class. Use a BiFunction<List<Employee>, List<Employee>, Map<String, List<Employee>>> that returns a map grouping employees by their department.
+
+4.Generate 20 random numbers between 1 and 100 and keep only those that are even and divisible by 5.
+Use a Supplier<Integer> with Stream.generate(). Apply a Predicate<Integer> to filter the numbers and collect the result into a list.
+
+5.Given a list of sentences, return the longest sentence that contains a certain keyword (e.g., "Java").
+Create a Predicate<String> that tests if the sentence contains "Java" and use max(Comparator.comparingInt(String::length)) to find the longest matching sentence.
+
+6.Count the frequency of each word in a list of strings using HashMap and lambdas. Given a list of words, use a HashMap to count how many times each word appears.
+Use lambda expressions and stream operations to update the counts.
+
+7.Group a list of students by their grade using HashMap and BiConsumer. Create a Student class with name and grade.
+Group students by their grade in a HashMap. Use a BiConsumer to insert students into the map.
+
+8.Merge two HashMaps containing product stock counts. Given two HashMaps representing stock counts of products in two warehouses,
+merge them by summing the counts for matching product keys using Map.merge() and a lambda.
+
+9.Filter a HashMap to keep only entries with values greater than 50. Given a HashMap,
+filter it to retain only entries where the value is greater than 50. Use streams and lambdas to produce a new filtered map.
+
+10.Sort a HashMap by its values in descending order and collect to a LinkedHashMap.
+Given a HashMap, sort its entries by value descending using lambdas and streams, then collect the sorted entries into a LinkedHashMap to preserve order.
