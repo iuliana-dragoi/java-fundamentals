@@ -1,0 +1,74 @@
+1. Filter names starting with 'A' using Predicate
+Write a program that filters a list of names, keeping only those that start with the letter A.
+
+2. Convert list of strings to uppercase using Function
+Use Function<String, String> to convert a list of strings to uppercase.
+
+3. Multiply numbers by 10 using UnaryOperator
+Apply a lambda that multiplies each number in the list by 10.
+
+4. Combine first and last names using BiFunction
+Use BiFunction<String, String, String> to combine first and last names into a full name.
+
+5. Check if age is over 18 using Predicate<Integer>
+Check whether a number representing age is greater than 18.
+
+6. Greet a list of names using Consumer<String>
+Use a Consumer that takes a name and displays a greeting.
+
+7. Supply a random number using Supplier<Integer>
+Create a Supplier that returns a random number between 1 and 100.
+
+8. Check if two strings are equal (case-insensitive) using BiPredicate
+Compare two strings ignoring case sensitivity.
+
+9. Remove null or empty strings using lambda
+Filter a list of strings by removing those that are null or empty.
+
+10. Check if number is even using lambda
+Write a Predicate<Integer> that checks whether a number is even.
+
+11. Square each number and collect into list using Function + map()
+Transform each number in a list into its square using map() and Function.
+
+12. Sum all elements using reduce() and lambda
+Sum all values in a list of Integer using reduce().
+
+13. Find the longest string using Comparator and lambda
+Find the longest string in a list.
+
+14. Generate a constant greeting using Supplier<String>
+Create a Supplier that always returns "Hello, world!".
+
+15. Print the length of each string using Consumer
+Use forEach() with a Consumer that prints the length of each string.
+
+16. Concatenate a prefix to each string using map()
+Add the prefix "Item: " to each string in a list.
+
+17. Check if a string contains only digits using Predicate<String>
+Check if a string contains only digits (Character.isDigit).
+
+18. Convert list of numbers to list of strings using map()
+Convert a List<Integer> into a List<String>.
+
+19. Filter out duplicate words using distinct() and lambda
+Remove duplicates from a list of words.
+
+20. Sort list of people by age using lambda and Comparator
+Sort a list of Person objects by age using a lambda.
+
+21. Check if all strings are lowercase using allMatch()
+Verify whether all elements in a list are in lowercase.
+
+22. Get first element that matches condition using filter().findFirst()
+Find the first name that starts with "M".
+
+23. Combine two integer lists element by element using BiFunction
+Add elements from two lists of Integer, position by position.
+
+24. Build a list of random numbers using Supplier and Stream.generate()
+Create a list of 10 random numbers between 0 and 50.
+
+25. Chain multiple Predicates to check complex condition
+Check whether a number is both positive and even using Predicate.and().
