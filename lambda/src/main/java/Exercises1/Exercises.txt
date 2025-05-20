@@ -1,0 +1,76 @@
+Source: https://www.w3resource.com/java-exercises/lambda/index.php
+
+1. Sum two integers using lambda expression
+Write a Java program to implement a lambda expression to find the sum of two integers.
+
+2. Check if a string is empty using lambda
+Write a Java program to implement a lambda expression to check if a given string is empty.
+
+3. Convert strings to upper/lowercase using lambda
+Write a Java program to implement a lambda expression to convert a list of strings to uppercase and lowercase.
+
+4. Filter even and odd numbers with lambda
+Write a Java program to implement a lambda expression to filter out even and odd numbers from a list of integers.
+
+5. Sort strings alphabetically using lambda
+Write a Java program to implement a lambda expression to sort a list of strings in alphabetical order.
+
+6. Find average of doubles using lambda
+Write a Java program to implement a lambda expression to find the average of a list of doubles.
+
+7. Remove integer duplicates using lambda
+Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
+
+8. Calculate factorial using lambda expression
+Write a lambda expression to implement a lambda expression to calculate the factorial of a given number.
+
+9. Check if number is prime using lambda
+Write a Java program to implement a lambda expression to create a lambda expression to check if a number is prime.
+
+10. Concatenate two strings using lambda
+Write a Java program to implement a lambda expression to concatenate two strings.
+
+11. Find max and min in list using lambda
+Write a Java program to implement a lambda expression to find the maximum and minimum values in a list of integers.
+
+12. Multiply and sum list elements using lambda
+Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers.
+
+13. Count words in sentence with lambda
+Write a Java program to implement a lambda expression to count words in a sentence.
+
+14. Check if string is palindrome using lambda
+Write a Java program to implement a lambda expression to check if a given string is a palindrome.
+
+15. Sum squares of odd/even numbers using lambda
+Write a Java program to implement a lambda expression to calculate the sum of squares of all odd and even numbers in a list.
+
+16. Check if word exists in list using lambda
+Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
+
+17. Find longest and shortest string using lambda
+Write a Java program to implement a lambda expression to find the length of the longest and smallest string in a list.
+
+18. Check if number is a perfect square using lambda
+Write a Java program to implement a lambda expression to check if a given number is a perfect square.
+
+19. Find 2nd largest/smallest in array using lambda
+Write a Java program to implement a lambda expression to find the second largest and smallest element in an array.
+
+20. Sort objects by attribute using lambda
+Write a Java program to implement a lambda expression to sort a list of objects based on a specific attribute.
+
+21. Sum all primes in range using lambda
+Write a Java program to implement a lambda expression to calculate the sum of all prime numbers in a given range.
+
+22. Check case of strings in list using lambda
+Write a Java program to implement a lambda expression to check if a list of strings are all uppercase or all lowercase or mixedcase.
+
+23. Find average string length using lambda
+Write a Java program to implement a lambda expression to find the average length of strings in a list.
+
+24. Find largest prime factor using lambda
+Write a Java program to implement a lambda expression to find the largest prime factor of a given number.
+
+25. Convert integer to binary using lambda
+Write a Java program to implement a lambda expression to convert an integer to their corresponding binary representation.
