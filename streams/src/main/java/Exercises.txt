@@ -1,0 +1,31 @@
+BASIC – Filtering, Mapping, Sorting
+1.Filter all even numbers from a list of integers.
+2.Convert a list of names (Strings) to uppercase.
+3.Sort a list of Person objects by ascending age.
+4.Select numbers greater than the average value from a list.
+5.Get a list of word lengths from a list of sentences.
+
+TERMINAL OPERATIONS (collect, reduce, forEach)
+1.Print each element of a list of strings using forEach.
+2.Calculate the sum of all elements in a list using reduce.
+3.Group a list of people by gender using Collectors.groupingBy.
+4.Collect all names from a list of Employee objects into a Set.
+5.Count how many people in a list are over 30 years old.
+
+COMBINED OPERATIONS
+1.From a list of books, select titles published after the year 2000 and sort them alphabetically.
+2.From a list of transactions, extract the total amount for a specific month.
+3.Filter products with stock > 0, map to names, sort descending, and collect into a list.
+4.From a list of words, get all distinct words that start with an uppercase letter.
+5.Flatten a list of lists of integers into a single list using flatMap.
+
+ADVANCED EXERCISES
+1.Find the second largest number in a list of integers.
+2.Check if all passwords in a list have at least 8 characters using allMatch.
+3.Check if any person in a list is under 18 years old using anyMatch.
+4.Create a map where the key is the first letter of a name, and the value is a list of names starting with that letter.
+5.Sort a Map<String, Integer> by value using Streams.
+
+PARALLEL STREAMS
+1.Use parallelStream to compute the sum of a large list of numbers and compare the performance with sequential streams.
+2.Apply a parallelStream to quickly convert a large list of strings to uppercase.
