@@ -1,0 +1,49 @@
+
+
+GPT: https://chatgpt.com/c/68349af1-9c98-8011-815c-1e3f159e5034
+
+--------------------------------------------
+Tema: Microserviciu pentru Managementul Utilizatorilor (User Service)
+
+Funcționalități:
+-Înregistrare utilizator
+-Login
+-Atribuire roluri
+-Vizualizare profil
+-Căutare utilizatori
+
+Structură arhitecturală:
+-Controller → Service → Repository
+-DTOs pentru input/output
+-Mapper pentru conversii
+-Validări
+-Teste unitare și de integrare
+
+Cum aplici principiile SOLID în acest microserviciu
+1. SRP – Single Responsibility Principle
+Fiecare clasă are un singur scop:
+-UserService – logica de business
+-UserRepository – interacțiune cu DB
+-UserMapper – transformări DTO ↔ Entity
+-UserValidator – validări personalizate
+-EmailSenderService – trimitere email
+
+2. OCP – Open/Closed Principle
+Poți adăuga validări noi (ex: validare număr de telefon) fără să modifici codul existent, doar adăugând noi implementări de Validator<UserDto>.
+Poți adăuga noi metode de autentificare (ex: social login) folosind strategii fără să schimbi AuthService.
+
+3. LSP – Liskov Substitution Principle
+Creezi interfața User și implementezi AdminUser, RegularUser care pot fi folosite interschimbabil.
+Sau: UserDetails și diverse tipuri de utilizatori pentru Spring Security.
+
+4. ISP – Interface Segregation Principle
+Segmentezi interfețele:
+-UserReaderService: doar metode de tip GET
+-UserWriterService: doar metode de modificare
+-NotificationSender: separată de user service
+
+5. DIP – Dependency Inversion Principle
+-UserService depinde de UserRepository ca interfață, nu de implementare.
+-NotificationService depinde de INotificationSender, implementat de EmailSender, SmsSender, etc.
+
+

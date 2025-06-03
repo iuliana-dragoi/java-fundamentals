@@ -1,0 +1,22 @@
+1. SRP – Single Responsibility Principle
+-A class must have a single responsibility.
+-In the example with orders, we separated the responsibilities between managing orders, saving to a file and sending emails, each having its own class.
+
+2. OCP – Open/Closed Principle
+-Classes must be open for extension, but closed for modification.
+-In the example with reductions, we replaced the if statements with a hierarchy of strategies, allowing the addition of new types of reductions without modifying the existing code.
+
+3. LSP – Liskov Substitution Principle
+-Derived classes must be able to be replaced with base classes without altering the behavior of the program.
+-In the example with geometric shapes, we avoided Square inheriting Rectangle, because violating this principle led to incorrect behaviors when substitution was used.
+
+(Substitution, in the context of object-oriented programming and especially in the Liskov Substitution Principle (LSP), means:
+Replacing (substituting) an instance of the parent class with an instance of a derived class, without affecting the correct behavior of the program.)
+
+4. ISP – Interface Segregation Principle
+-Classes should not be forced to implement interfaces that they do not use.
+-In the example with multifunctional devices, we separated the Machine interface into specialized interfaces such as Printer, Scanner and Fax, so that each class implements only what is relevant to it.
+
+5. DIP – Dependency Inversion Principle
+-High-level modules should not depend on low-level modules, but both should depend on abstractions.
+-In the example with notifications, NotificationService no longer depends directly on EmailSender, but on the MessageSender interface, which allows easy change of the sending mechanism.

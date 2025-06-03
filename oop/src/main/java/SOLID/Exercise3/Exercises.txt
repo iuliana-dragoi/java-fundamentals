@@ -1,0 +1,52 @@
+Complete OOP Exercise (All SOLID Principles)
+Topic: Order Management in an Online Store
+Overall Objective: Create an OOP application that manages customer orders.
+
+Features:
+-create an order with products
+-calculate the order total (with discounts)
+-save the order
+-send the customer notification
+-export the order in text format
+
+Stage 1 – Basic entities (Model)
+-Client (abstract)
+    -Inherited from GuestClient, RegisteredClient (LSP)
+-Product
+    -Name + unit price
+-OrderItem
+    -Product + quantity
+-Order
+    -Customer + list of OrderItem
+
+Stage 2 – SRP (Separate responsibilities into distinct services)
+-OrderService: Create orders
+-OrderSaver: Save the order
+-NotificationSender: Send notifications (email/sms)
+-OrderExporter: Export the order in text format
+
+Stage 3 – OCP (Discount Strategies)
+-Use a DiscountStrategy interface
+-Create implementations for:
+-no discount
+-percentage discount
+-fixed discount
+-You can add new discounts without changing the code existing
+
+Stage 4 – LSP
+-Client is abstract
+-GuestClient → no discounts
+-RegisteredClient → has discount strategy
+-All clients can be used interchangeably without breaking the order logic.
+
+Stage 5 – ISP
+-Notifier has separate methods:
+-EmailNotifiable
+-SmsNotifiable
+-EmailNotificationSender class implements EmailNotifiable only
+
+Stage 6 – DIP
+-OrderProcessor depends on:
+-OrderSaver (interface)
+-Notifier (interface)
+-OrderExporter (interface)

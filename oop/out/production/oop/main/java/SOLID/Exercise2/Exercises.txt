@@ -1,0 +1,9 @@
+Exercițiu combinat (Toate principiile)
+Tema: Gestionarea unui sistem de facturare
+-Creează o aplicație OOP care gestionează facturile clienților.
+-Include clase pentru generarea facturilor, trimiterea acestora prin email, salvarea în bază de date, și aplicarea reducerilor.
+-Aplică SRP pentru separarea responsabilităților.
+-Aplică OCP pentru a adăuga noi tipuri de reduceri fără modificări.
+-Asigură LSP între clasele Client, RegularClient, CorporateClient.
+-Segmentează interfețele ISP pentru funcționalități diferite (ex: export în PDF vs trimitere email).
+-Aplică DIP pentru ca serviciile să depindă de interfețe, nu de clase concrete.

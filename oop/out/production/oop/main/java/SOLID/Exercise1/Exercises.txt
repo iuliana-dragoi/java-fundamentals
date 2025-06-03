@@ -1,0 +1,29 @@
+1. SRP - Single Responsibility Principle
+Exercițiu: Gestiunea comenzilor
+Creează o clasă Order care conține detalii despre produse, cantități și prețuri. Inițial, clasa conține și logica de salvare în fișier și trimitere de email.
+Refactorizează codul astfel încât fiecare clasă să aibă o singură responsabilitate: gestionarea comenzilor, salvarea în fișier, trimiterea emailului etc.
+Obiectiv: Separă responsabilitățile în clase distincte pentru a respecta SRP.
+
+2. OCP - Open/Closed Principle
+Exercițiu: Calculul reducerilor
+Creează o clasă care aplică reduceri clienților în funcție de tipul lor (Regular, Premium, VIP). Inițial, folosește if sau switch în clasă.
+Refactorizează folosind o ierarhie de clase sau strategii, astfel încât să poți adăuga noi tipuri de reduceri fără să modifici codul existent.
+Obiectiv: Permite extensia comportamentului fără modificarea claselor existente.
+
+3. LSP - Liskov Substitution Principle
+Exercițiu: Forme geometrice
+Creează clase Rectangle și Square moștenite dintr-o clasă Shape. Scrie o funcție care primește o formă și setează lățimea și înălțimea.
+Observă ce se întâmplă când folosești un Square în loc de Rectangle. Refactorizează designul astfel încât substituirea să nu afecteze comportamentul corect.
+Obiectiv: Asigură-te că instanțele claselor derivate pot înlocui cele ale claselor de bază fără efecte neașteptate.
+
+4. ISP - Interface Segregation Principle
+Exercițiu: Dispozitive multifuncționale
+Creează o interfață Machine cu metode print(), scan(), fax(). Apoi creează clase precum Printer, Scanner, MultifunctionalDevice.
+Vei observa că anumite clase trebuie să implementeze metode de care nu au nevoie. Refactorizează în mai multe interfețe specializate.
+Obiectiv: O clasă nu trebuie să fie forțată să implementeze metode pe care nu le folosește.
+
+5. DIP - Dependency Inversion Principle
+Exercițiu: Serviciu de notificare
+Creează o clasă NotificationService care trimite emailuri direct printr-un EmailSender.
+Refactorizează astfel încât NotificationService să depindă de o abstracție (interfață MessageSender) și nu de o clasă concretă. Apoi implementează un alt tip de trimitere (ex: SMS).
+Obiectiv: Clasele de nivel înalt să nu depindă de clase de nivel jos, ci de abstracții.

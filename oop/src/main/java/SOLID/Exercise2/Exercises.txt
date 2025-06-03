@@ -1,0 +1,9 @@
+Combined Exercise (All Principles)
+Topic: Managing an Invoicing System
+-Create an OOP application that manages customer invoices.
+-Include classes for generating invoices, sending them by email, saving them to the database, and applying discounts.
+-Apply SRP for separation of responsibilities.
+-Apply OCP to add new discount types without changes.
+-Ensure LSP between the Client, RegularClient, CorporateClient classes.
+-Segment the ISP interfaces for different functionalities (e.g. PDF export vs. sending email).
+-Apply DIP so that services depend on interfaces, not concrete classes.

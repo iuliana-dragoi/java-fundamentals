@@ -1,0 +1,29 @@
+1. SRP - Single Responsibility Principle
+Exercise: Order Management
+Create an Order class that contains details about products, quantities, and prices. Initially, the class also contains the logic for saving to a file and sending an email.
+Refactor the code so that each class has a single responsibility: managing orders, saving to a file, sending an email, etc.
+Objective: Separate responsibilities into distinct classes to comply with SRP.
+
+2. OCP - Open/Closed Principle
+Exercise: Calculating discounts
+Create a class that applies discounts to customers based on their type (Regular, Premium, VIP). Initially, use if or switch in the class.
+Refactor using a hierarchy of classes or strategies so that you can add new types of discounts without changing the existing code.
+Objective: Allow for the extension of behavior without changing the existing classes.
+
+3. LSP - Liskov Substitution Principle
+Exercise: Geometric Shapes
+Create Rectangle and Square classes that inherit from a Shape class. Write a function that takes a shape and sets its width and height.
+Observe what happens when you use a Square instead of a Rectangle. Refactor the design so that the substitution does not affect the correct behavior.
+Objective: Ensure that instances of derived classes can replace those of base classes without unexpected effects.
+
+4. ISP - Interface Segregation Principle
+Exercise: Multifunctional Devices
+Create an interface Machine with print(), scan(), fax() methods. Then create classes such as Printer, Scanner, MultifunctionalDevice.
+You will notice that some classes must implement methods that they do not need. Refactor into several specialized interfaces.
+Objective: A class should not be forced to implement methods that it does not use.
+
+5. DIP - Dependency Inversion Principle
+Exercise: Notification Service
+Create a NotificationService class that sends emails directly through an EmailSender.
+Refactor so that NotificationService depends on an abstraction (MessageSender interface) and not on a concrete class. Then implement another type of sending (e.g. SMS).
+Objective: High-level classes should not depend on low-level classes, but on abstractions.

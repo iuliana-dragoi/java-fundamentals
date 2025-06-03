@@ -1,0 +1,52 @@
+Exercițiu OOP Complet (Toate principiile SOLID)
+Tema: Gestiunea comenzilor într-un magazin online
+Obiectiv general: Creează o aplicație OOP care gestionează comenzile clienților.
+
+Funcționalități:
+-crearea unei comenzi cu produse
+-calculul totalului comenzii (cu reduceri)
+-salvarea comenzii
+-trimiterea notificării clientului
+-exportul comenzii în format text
+
+Etapa 1 – Entități de bază (Model)
+-Client (abstract)
+    Moștenit de GuestClient, RegisteredClient (LSP)
+-Product
+    Nume + preț unitar
+-OrderItem
+    Produs + cantitate
+-Order
+    Client + listă de OrderItem
+
+Etapa 2 – SRP (Separați responsabilitățile în servicii distincte)
+-OrderService: Creează comenzi
+-OrderSaver: Salvează comanda
+-NotificationSender: Trimite notificări (email/sms)
+-OrderExporter: Exportă comanda în format text
+
+Etapa 3 – OCP (Strategii de reducere)
+-Folosește o interfață DiscountStrategy
+-Creează implementări pentru:
+-fără reducere
+-reducere procentuală
+-reducere fixă
+-Poți adăuga noi reduceri fără să modifici codul existent
+
+Etapa 4 – LSP
+-Client e abstract
+-GuestClient → fără reduceri
+-RegisteredClient → are strategie de reducere
+-Toți clienții pot fi folosiți interschimbabil fără a rupe logica comenzii.
+
+Etapa 5 – ISP
+-Notifier are metode separate:
+-EmailNotifiable
+-SmsNotifiable
+-Clasa EmailNotificationSender implementează doar EmailNotifiable
+
+Etapa 6 – DIP
+-OrderProcessor depinde de:
+-OrderSaver (interfață)
+-Notifier (interfață)
+-OrderExporter (interfață)

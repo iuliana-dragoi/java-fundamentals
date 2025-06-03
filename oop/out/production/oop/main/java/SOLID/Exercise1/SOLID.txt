@@ -1,0 +1,23 @@
+
+1. SRP – Single Responsibility Principle
+-O clasă trebuie să aibă o singură responsabilitate.
+-În exemplul cu comenzile, am separat responsabilitățile între gestionarea comenzilor, salvarea în fișier și trimiterea emailurilor, fiecare având propria clasă.
+
+2. OCP – Open/Closed Principle
+-Clasele trebuie să fie deschise pentru extindere, dar închise pentru modificare.
+-În exemplul cu reducerile, am înlocuit instrucțiunile if cu o ierarhie de strategii, permițând adăugarea de noi tipuri de reduceri fără a modifica codul existent.
+
+3. LSP – Liskov Substitution Principle
+-Clasele derivate trebuie să poată fi înlocuite cu clasele de bază fără a altera comportamentul programului.
+-În exemplul cu formele geometrice, am evitat ca Square să moștenească Rectangle, deoarece încălcarea acestui principiu ducea la comportamente incorecte atunci când se folosea substituția.
+
+(Substituția, în contextul programării orientate pe obiect și în special în principiul Liskov Substitution Principle (LSP), înseamnă:
+Înlocuirea (substituirea) unei instanțe a clasei părinte cu o instanță a unei clase derivate, fără să afecteze comportamentul corect al programului.)
+
+4. ISP – Interface Segregation Principle
+-Clasele nu trebuie forțate să implementeze interfețe pe care nu le folosesc.
+-În exemplul cu dispozitivele multifuncționale, am separat interfața Machine în interfețe specializate precum Printer, Scanner și Fax, astfel încât fiecare clasă să implementeze doar ce îi este relevant.
+
+5. DIP – Dependency Inversion Principle
+-Modulele de nivel înalt nu trebuie să depindă de module de nivel jos, ci ambele să depindă de abstracții.
+-În exemplul cu notificările, NotificationService nu mai depinde direct de EmailSender, ci de interfața MessageSender, ceea ce permite schimbarea ușoară a mecanismului de trimitere.
